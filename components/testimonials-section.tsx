@@ -285,6 +285,7 @@ export function TestimonialsSection() {
                   )}
 
                   <div className="p-6 sm:p-8 md:p-10 lg:p-12 relative">
+<<<<<<< HEAD
                     <div
                       className="text-5xl sm:text-6xl md:text-7xl font-serif leading-none mb-4 md:mb-6 opacity-10 text-white animate-float-slow"
                       style={{ animationDelay: "0.5s" }}
@@ -293,6 +294,11 @@ export function TestimonialsSection() {
                     </div>
 
                     <blockquote className="text-white text-base sm:text-lg md:text-xl lg:text-2xl font-normal leading-relaxed mb-8 md:mb-10 lg:mb-12">
+=======
+                   
+
+                    <blockquote className="text-white text-[18px] tracking-tight font-bold leading-relaxed mb-8 md:mb-10 lg:mb-12">
+>>>>>>> 909f7c4 (Initial commit - updated website)
                       {testimonial.quote}
                     </blockquote>
 
@@ -310,6 +316,7 @@ export function TestimonialsSection() {
                         />
                       </div>
                       <div className="flex-1 min-w-0">
+<<<<<<< HEAD
                         <h3 className="text-white text-sm sm:text-base md:text-lg font-semibold mb-1 truncate">
                           {testimonial.author}
                         </h3>
@@ -345,10 +352,19 @@ export function TestimonialsSection() {
                           <path d="M7 17L17 7M17 7H7M17 7V17" />
                         </svg>
                       </Link>
+=======
+  <h3 className="text-white text-sm sm:text-base md:text-lg font-semibold truncate">
+    {testimonial.author}
+  </h3>
+</div>
+
+                      
+>>>>>>> 909f7c4 (Initial commit - updated website)
                     </div>
                   </div>
 
                   <div className="absolute top-4 right-4 md:top-6 md:right-6">
+<<<<<<< HEAD
                     <span
                       className="text-white/30 text-xs md:text-sm font-medium px-3 py-1 rounded-full"
                       style={{
@@ -358,6 +374,9 @@ export function TestimonialsSection() {
                     >
                       {String(index + 1).padStart(2, "0")} / {String(testimonials.length).padStart(2, "0")}
                     </span>
+=======
+                    
+>>>>>>> 909f7c4 (Initial commit - updated website)
                   </div>
                 </div>
               </div>

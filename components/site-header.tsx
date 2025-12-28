@@ -167,7 +167,11 @@ export function SiteHeader() {
               }}
             >
               <a
+<<<<<<< HEAD
                 href="https://instagram.com/adnanakifdesign"
+=======
+                href="https://instagram.com/adnanbranding"
+>>>>>>> 909f7c4 (Initial commit - updated website)
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-black/70 text-[16px] font-bold tracking-tight hover:text-[#ff3b00] transition-colors duration-300"
@@ -175,7 +179,11 @@ export function SiteHeader() {
                 Instagram
               </a>
               <a
+<<<<<<< HEAD
                 href="https://facebook.com/brandzinr"
+=======
+                href="https://facebook.com/adnanbranding"
+>>>>>>> 909f7c4 (Initial commit - updated website)
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-black/70 text-[16px] font-bold tracking-tight hover:text-[#ff3b00] transition-colors duration-300"

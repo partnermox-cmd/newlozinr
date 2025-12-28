@@ -7,6 +7,10 @@ import { useRouter } from "next/navigation"
 import Link from "next/link"
 import { ArrowLeft } from "lucide-react"
 import { motion, AnimatePresence } from "framer-motion"
+<<<<<<< HEAD
+=======
+import { WorkHeader } from "@/components/work-header"
+>>>>>>> 909f7c4 (Initial commit - updated website)
 
 export default function GalleryClientPage() {
   const [isLoading, setIsLoading] = useState(true)
@@ -74,8 +78,11 @@ export default function GalleryClientPage() {
 
   return (
     <main className="min-h-screen bg-background">
+<<<<<<< HEAD
       {/* Removed UnifiedHeader */}
 
+=======
+>>>>>>> 909f7c4 (Initial commit - updated website)
       <AnimatePresence>
         {isLoading && (
           <motion.div
@@ -95,6 +102,11 @@ export default function GalleryClientPage() {
         transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
         className="pt-20"
       >
+<<<<<<< HEAD
+=======
+        <WorkHeader title="Gallery" showFilters={false} />
+
+>>>>>>> 909f7c4 (Initial commit - updated website)
         <div className="px-6 md:px-12 lg:px-24 py-12 md:py-16 lg:py-20">
           <motion.button
             onClick={() => router.back()}
@@ -106,6 +118,7 @@ export default function GalleryClientPage() {
             <ArrowLeft size={18} className="transition-transform duration-300" />
             <span className="text-sm">Back</span>
           </motion.button>
+<<<<<<< HEAD
 
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -114,6 +127,8 @@ export default function GalleryClientPage() {
           >
             {/* Large header text removed */}
           </motion.div>
+=======
+>>>>>>> 909f7c4 (Initial commit - updated website)
         </div>
 
         <div className="px-6 md:px-12 lg:px-24 pb-20 md:pb-32">

@@ -34,7 +34,10 @@ export default function WorkClientPage() {
   return (
     <PageLoader>
       <main className="min-h-screen bg-[#0b0b0b] transition-colors duration-300">
+<<<<<<< HEAD
         {/* Removed UnifiedHeader */}
+=======
+>>>>>>> 909f7c4 (Initial commit - updated website)
         <WorkHeader showFilters={false} />
         <WorkFilters categories={industries} onFilterChange={setActiveFilter} activeFilter={activeFilter} />
         <WorkThumbnails filteredProjects={filteredProjects} />

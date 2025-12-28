@@ -389,12 +389,22 @@ export function Footer() {
             {/* Social Links */}
             <div className="flex flex-col">
               <div className="flex flex-col gap-2">
+<<<<<<< HEAD
                 <AnimatedLinkMobile href="https://x.com/adnandzinr">TWITTER</AnimatedLinkMobile>
                 <AnimatedLinkMobile href="#">LINKEDIN</AnimatedLinkMobile>
                 <AnimatedLinkMobile href="https://web.facebook.com/brandzinr">FACEBOOK</AnimatedLinkMobile>
                 <AnimatedLinkMobile href="https://www.instagram.com/adnanakifdesign/">INSTAGRAM</AnimatedLinkMobile>
               </div>
               <div className="mt-18 flex flex-col gap-1">
+=======
+                <AnimatedLink href="https://www.instagram.com/adnanbranding/">INSTAGRAM</AnimatedLink>
+                  <AnimatedLink href="#">LINKEDIN</AnimatedLink>
+                  <AnimatedLink href="https://web.facebook.com/adnanbranding">FACEBOOK</AnimatedLink>
+                  <AnimatedLink href="https://www.youtube.com/@adnanbranding">YOUTUBE</AnimatedLink>
+                  <AnimatedLink href="mailto:adnanakif.co@email.com">EMAIL</AnimatedLink>
+              </div>
+              <div className="mt-12 flex flex-col gap-1">
+>>>>>>> 909f7c4 (Initial commit - updated website)
                 <NavLinkMobile href="/terms">Terms & Conditions</NavLinkMobile>
                 <NavLinkMobile href="/privacy">Privacy Policy</NavLinkMobile>
               </div>
@@ -440,10 +450,17 @@ export function Footer() {
               {/* Social Links */}
               <div className="flex flex-col lg:mt-3">
                 <div className="flex flex-col gap-2">
+<<<<<<< HEAD
                   <AnimatedLink href="https://www.instagram.com/adnanakifdesign/">INSTAGRAM</AnimatedLink>
                   <AnimatedLink href="#">LINKEDIN</AnimatedLink>
                   <AnimatedLink href="https://web.facebook.com/brandzinr">FACEBOOK</AnimatedLink>
                   <AnimatedLink href="https://x.com/adnandzinr">TWITTER</AnimatedLink>
+=======
+                  <AnimatedLink href="https://www.instagram.com/adnanbranding/">INSTAGRAM</AnimatedLink>
+                  <AnimatedLink href="#">LINKEDIN</AnimatedLink>
+                  <AnimatedLink href="https://web.facebook.com/adnanbranding">FACEBOOK</AnimatedLink>
+                  <AnimatedLink href="https://www.youtube.com/@adnanbranding">YOUTUBE</AnimatedLink>
+>>>>>>> 909f7c4 (Initial commit - updated website)
                   <AnimatedLink href="mailto:adnanakif.co@email.com">EMAIL</AnimatedLink>
                 </div>
                 <div className="mt-12 flex flex-col gap-1">

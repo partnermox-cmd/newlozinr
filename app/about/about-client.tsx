@@ -3,6 +3,7 @@ import { WorkHeader } from "@/components/work-header"
 import Image from "next/image"
 import { useRef, useEffect, useState } from "react"
 import { PageLoader } from "@/components/page-loader"
+<<<<<<< HEAD
 import Link from "next/link"
 
 export default function AboutClient() {
@@ -13,10 +14,19 @@ export default function AboutClient() {
   const agencyRef = useRef<HTMLDivElement>(null)
   const agencyTextRef = useRef<HTMLDivElement>(null)
   const [agencyAnimated, setAgencyAnimated] = useState(false)
+=======
+
+export default function AboutClient() {
+  const imageRef = useRef<HTMLDivElement>(null)
+  const [imageAnimated, setImageAnimated] = useState(false)
+  const storyRef = useRef<HTMLDivElement>(null)
+  const [storyAnimated, setStoryAnimated] = useState(false)
+>>>>>>> 909f7c4 (Initial commit - updated website)
   const founderImageRef = useRef<HTMLDivElement>(null)
   const founderTextRef = useRef<HTMLDivElement>(null)
   const [founderImageAnimated, setFounderImageAnimated] = useState(false)
   const [founderTextAnimated, setFounderTextAnimated] = useState<boolean[]>([])
+<<<<<<< HEAD
   const [studioLinesAnimated, setStudioLinesAnimated] = useState<boolean[]>([])
   const [valuesAnimated, setValuesAnimated] = useState(false)
   const [statsAnimated, setStatsAnimated] = useState(false)
@@ -28,6 +38,8 @@ export default function AboutClient() {
   const teamRef = useRef<HTMLDivElement>(null)
   const timelineRef = useRef<HTMLDivElement>(null)
   const awardsRef = useRef<HTMLDivElement>(null)
+=======
+>>>>>>> 909f7c4 (Initial commit - updated website)
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -49,6 +61,7 @@ export default function AboutClient() {
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
+<<<<<<< HEAD
         if (entry.isIntersecting && animatedLines.length === 0) {
           const lines = [
           "lOZINR was built on a simple belief that great design isn't",
@@ -99,6 +112,21 @@ export default function AboutClient() {
 
     return () => observer.disconnect()
   }, [agencyAnimated])
+=======
+        if (entry.isIntersecting && !storyAnimated) {
+          setStoryAnimated(true)
+        }
+      },
+      { threshold: 0.1 },
+    )
+
+    if (storyRef.current) {
+      observer.observe(storyRef.current)
+    }
+
+    return () => observer.disconnect()
+  }, [storyAnimated])
+>>>>>>> 909f7c4 (Initial commit - updated website)
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -148,6 +176,7 @@ export default function AboutClient() {
     return () => observer.disconnect()
   }, [founderTextAnimated.length])
 
+<<<<<<< HEAD
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -270,10 +299,34 @@ export default function AboutClient() {
           <div className="max-w-full mx-auto">
             <div ref={imageRef} className="relative w-full aspect-[16/9] overflow-hidden">
               <Image src="/images/design-mode/img2.avif" alt="lOZ!NR Studio Team" fill className="object-cover" />
+=======
+  return (
+    <PageLoader>
+      <main className="bg-[#0b0b0b] text-primary transition-colors duration-300 lg:px-0">
+        {/* <CHANGE> Removed descriptiveText and coordinates props */}
+        <WorkHeader
+          title="About Us"
+          showFilters={false}
+        />
+
+        <section className="py-20 px-0 md:px-4 lg:px-8 border-b border-white/10">
+          <div className="max-w-full mx-auto">
+            <div
+              ref={imageRef}
+              className="relative w-full aspect-[21/9] overflow-hidden grayscale hover:grayscale-0 transition-all duration-1000 ease-in-out"
+            >
+              <Image
+                src="/images/design-mode/img2.avif"
+                alt="lOZ!NR Studio Team"
+                fill
+                className="object-cover scale-105 hover:scale-100 transition-transform duration-[2000ms]"
+              />
+>>>>>>> 909f7c4 (Initial commit - updated website)
             </div>
           </div>
         </section>
 
+<<<<<<< HEAD
         <section className="py-20 px-3 md:px-4 lg:px-8 bg-[#0b0b0b]">
           <div className="max-w-full mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
@@ -302,12 +355,71 @@ export default function AboutClient() {
                   }}
                 >
                   <p className="text-lg md:text-xl lg:text-[30px] tracking-tight leading-relaxed text-white font-medium">
+=======
+        {/* <CHANGE> Completely redesigned Studio Story section with clean, editorial-style single-column layout */}
+        <section className="py-24 md:py-32 lg:py-40 px-4 md:px-8 lg:px-12 bg-[#0b0b0b]">
+          <div className="max-w-5xl mx-auto">
+            <div ref={storyRef} className="space-y-16 md:space-y-20 lg:space-y-24">
+              {/* Section Label */}
+              <div 
+                className="flex items-center justify-center gap-6"
+                style={{
+                  opacity: storyAnimated ? 1 : 0,
+                  transform: storyAnimated ? "translateY(0)" : "translateY(20px)",
+                  transition: "all 1s cubic-bezier(0.16, 1, 0.3, 1)",
+                }}
+              >
+                <span className="h-px w-16 bg-white/20"></span>
+                <span className="text-xs md:text-sm uppercase tracking-[0.3em] text-white/40 font-light">
+                  Studio Story
+                </span>
+                <span className="h-px w-16 bg-white/20"></span>
+              </div>
+
+              {/* Main Statement */}
+              <div
+                className="text-center"
+                style={{
+                  opacity: storyAnimated ? 1 : 0,
+                  transform: storyAnimated ? "translateY(0)" : "translateY(30px)",
+                  transition: "all 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.2s",
+                }}
+              >
+                <h2 className="text-3xl md:text-5xl lg:text-6xl leading-tight tracking-tight text-white font-light text-balance max-w-4xl mx-auto">
+                  lOZ!NR was built on a simple belief that great design isn't just something you see,{" "}
+                  <span className="text-white/60 italic">it's something you feel</span>
+                </h2>
+              </div>
+
+              {/* Divider */}
+              <div
+                className="flex justify-center"
+                style={{
+                  opacity: storyAnimated ? 1 : 0,
+                  transition: "all 1s cubic-bezier(0.16, 1, 0.3, 1) 0.4s",
+                }}
+              >
+                <div className="h-px w-24 bg-white/10"></div>
+              </div>
+
+              {/* Body Content - Two Column on Desktop */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 lg:gap-16 pt-8">
+                <div
+                  style={{
+                    opacity: storyAnimated ? 1 : 0,
+                    transform: storyAnimated ? "translateY(0)" : "translateY(30px)",
+                    transition: "all 1s cubic-bezier(0.16, 1, 0.3, 1) 0.6s",
+                  }}
+                >
+                  <p className="text-lg md:text-xl lg:text-2xl leading-relaxed text-white/70 font-light">
+>>>>>>> 909f7c4 (Initial commit - updated website)
                     We work closely with founders, startups and global teams to build brands that are bold in thinking
                     and refined in execution.
                   </p>
                 </div>
                 <div
                   style={{
+<<<<<<< HEAD
                     opacity: studioLinesAnimated[2] ? 1 : 0,
                     transform: studioLinesAnimated[2] ? "translateY(0)" : "translateY(20px)",
                     transition: "all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1)",
@@ -316,6 +428,16 @@ export default function AboutClient() {
                   <p className="text-lg md:text-xl lg:text-[30px] text-white tracking-tight leading-relaxed font-medium">
                     Our process is hands-on and collaborative, combining clear strategy with creative instinct to create
                     work that's thoughtful, lasting and truly you.
+=======
+                    opacity: storyAnimated ? 1 : 0,
+                    transform: storyAnimated ? "translateY(0)" : "translateY(30px)",
+                    transition: "all 1s cubic-bezier(0.16, 1, 0.3, 1) 0.8s",
+                  }}
+                >
+                  <p className="text-lg md:text-xl lg:text-2xl leading-relaxed text-white/70 font-light">
+                    Our process is hands-on and collaborative, combining clear strategy with creative instinct to
+                    create work that's thoughtful, lasting and truly you.
+>>>>>>> 909f7c4 (Initial commit - updated website)
                   </p>
                 </div>
               </div>
@@ -323,6 +445,7 @@ export default function AboutClient() {
           </div>
         </section>
 
+<<<<<<< HEAD
         <section ref={valuesRef} className="py-20 px-3 md:px-4 lg:px-8 bg-[#0b0b0b] border-t border-white/30">
           <div className="max-w-full mx-auto">
             <h2 className="text-4xl md:text-5xl lg:text-[36px] text-white tracking-tight font-medium mb-16">
@@ -562,6 +685,12 @@ export default function AboutClient() {
           <div className="max-w-full mx-auto pt-16">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-12 items-start">
               <div className="text-[16px] font-medium text-pblack">Our founder</div>
+=======
+        <section className="relative py-32 px-3 md:px-4 lg:px-8 bg-[#0b0b0b] border-t border-white/10">
+          <div className="max-w-full mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-12 items-start">
+              <div className="text-[16px] font-medium text-white">Our founder</div>
+>>>>>>> 909f7c4 (Initial commit - updated website)
 
               <div
                 ref={founderImageRef}
@@ -615,7 +744,11 @@ export default function AboutClient() {
                     >
                       <span className="relative inline-block">
                         {item.name}
+<<<<<<< HEAD
                         <span className="absolute bottom-0 left-0 w-0 h-px bg-background transition-all duration-300 group-hover:w-full"></span>
+=======
+                        <span className="absolute bottom-0 left-0 w-0 h-px bg-white transition-all duration-300 group-hover:w-full"></span>
+>>>>>>> 909f7c4 (Initial commit - updated website)
                       </span>
 
                       <svg
